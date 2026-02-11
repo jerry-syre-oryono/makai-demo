@@ -1,5 +1,6 @@
 <?php
 // Configuration
+set_time_limit(0); // Increase execution time for all scripts including this config
 define('OLLAMA_HOST', 'http://localhost:11434');
 define('QDRANT_HOST', 'http://localhost:6333');
 define('COLLECTION_NAME', 'makai');
@@ -17,13 +18,14 @@ if (!isset($_SESSION['chat_history'])) {
 }
 
 // Limit chat history
-function addToChatHistory($role, $message) {
+function addToChatHistory($role, $message)
+{
     $_SESSION['chat_history'][] = [
         'role' => $role,
         'message' => $message,
         'time' => date('H:i')
     ];
-    
+
     // Keep only last 20 messages
     if (count($_SESSION['chat_history']) > 20) {
         $_SESSION['chat_history'] = array_slice($_SESSION['chat_history'], -20);

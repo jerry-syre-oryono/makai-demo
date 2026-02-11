@@ -1,5 +1,10 @@
 <?php
 require_once 'embed.php';
+
+// Increase execution time and memory for large ingestion
+set_time_limit(0);
+ignore_user_abort(true);
+ini_set('memory_limit', '1024M');
 require_once 'qdrant.php';
 require_once 'vendor/autoload.php';
 
