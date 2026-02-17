@@ -66,3 +66,8 @@ Once setup, navigate to `index.php` in your web server to access the application
 ---
 
 This `README.md` provides a general overview and basic setup instructions. More specific details for configuration, running Qdrant, and command-line usage of scripts like `ingest.php` would need to be extracted from the respective files.
+
+docker run -p 6333:6333 \
+  --memory=4g \
+  --cpus=2 \
+  qdrant/qdrant
