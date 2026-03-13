@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAKAI - Makerere AI Assistant</title>
     <link rel="icon" type="image/png" href="./assets/Mak-Logo.png">
-    <link rel="stylesheet" href="./styles/output.css">
+    <link rel="stylesheet" href="./styles/output.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,42 +16,42 @@
 </head>
 
 <body
-    class="bg-gray-50 min-h-screen font-sans selection:bg-primary-200 selection:text-primary-900 overflow-x-hidden relative">
+    class="bg-gray-50 dark:bg-gray-900 min-h-screen font-sans selection:bg-primary-200 dark:selection:bg-primary-900 selection:text-primary-900 dark:selection:text-primary-100 overflow-x-hidden relative">
 
     <!-- Background Morphing Blobs -->
     <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
         <div
-            class="absolute top-0 left-1/4 w-96 h-96 bg-primary-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob">
+            class="absolute top-0 left-1/4 w-96 h-96 bg-primary-200 dark:bg-primary-900 rounded-full mix-blend-multiply filter blur-3xl opacity-30 dark:opacity-20 animate-blob">
         </div>
         <div
-            class="absolute top-0 right-1/4 w-96 h-96 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000">
+            class="absolute top-0 right-1/4 w-96 h-96 bg-green-200 dark:bg-green-900 rounded-full mix-blend-multiply filter blur-3xl opacity-30 dark:opacity-20 animate-blob animation-delay-2000">
         </div>
         <div
-            class="absolute -bottom-32 left-1/3 w-96 h-96 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000">
+            class="absolute -bottom-32 left-1/3 w-96 h-96 bg-emerald-200 dark:bg-emerald-900 rounded-full mix-blend-multiply filter blur-3xl opacity-30 dark:opacity-20 animate-blob animation-delay-4000">
         </div>
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-40 top-0 start-0 border-b border-white/20 glass transition-all duration-300">
+    <nav class="fixed w-full z-40 top-0 start-0 border-b border-white/20 dark:border-white/10 glass dark:bg-gray-800/30 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center group cursor-pointer">
                         <div
-                            class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center text-white shadow-lg shadow-primary-500/30 mr-3 group-hover:scale-105 transition-transform duration-300">
+                            class="w-10 h-10 rounded-xl flex items-center justify-center text-white mr-3 group-hover:scale-105 transition-transform duration-300">
                             <img src="./assets/Mak-Logo.png" alt="MAKAI Logo" class="h-full w-full object-contain">
                         </div>
                         <div>
-                            <span class="text-2xl font-bold text-gray-900 tracking-tight">MAKAI</span>
+                            <span class="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">MAKAI</span>
                             <span
-                                class="block hidden sm:block text-xs font-medium text-primary-600 tracking-wide uppercase">Makerere
+                                class="block hidden sm:block text-xs font-medium text-primary-600 dark:text-primary-400 tracking-wide uppercase">Makerere
                                 AI Assistant</span>
                         </div>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4">
                     <a href="ingest.php"
-                        class="text-gray-600 hover:text-primary-600 px-4 py-2 text-sm font-semibold transition-colors flex items-center bg-white/50 hover:bg-white rounded-lg border border-transparent hover:border-gray-100">
+                        class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 px-4 py-2 text-sm font-semibold transition-colors flex items-center bg-white/50 dark:bg-gray-700/50 hover:bg-white dark:hover:bg-gray-600 rounded-lg border border-transparent hover:border-gray-100 dark:hover:border-gray-600">
                         <i class="fas fa-database mr-2 opacity-70"></i> Ingest Data
                     </a>
                 </div>
@@ -66,25 +66,25 @@
         <div class="text-center py-16 lg:py-24 relative">
             <div class="animate-fade-in">
                 <div
-                    class="inline-flex items-center bg-white/80 backdrop-blur-sm border border-primary-100 rounded-full px-4 py-1.5 shadow-sm mb-8 animate-slide-up">
+                    class="inline-flex items-center bg-white/80 dark:bg-gray-700/80 backdrop-blur-sm border border-primary-100 dark:border-primary-900 rounded-full px-4 py-1.5 shadow-sm mb-8 animate-slide-up">
                     <span class="flex h-2 w-2 relative mr-2">
                         <span
                             class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
                     </span>
-                    <span class="text-xs font-semibold text-primary-700 tracking-wide uppercase">AI-Powered Campus
+                    <span class="text-xs font-semibold text-primary-700 dark:text-primary-300 tracking-wide uppercase">AI-Powered Campus
                         Guide</span>
                 </div>
 
-                <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight animate-slide-up"
+                <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 dark:text-white mb-6 tracking-tight leading-tight animate-slide-up"
                     style="animation-delay: 0.1s;">
                     Simplify Your <br>
                     <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-emerald-500">Makerere
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 dark:from-primary-400 to-emerald-500 dark:to-emerald-400">Makerere
                         Journey</span>
                 </h1>
 
-                <p class="mt-6 text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed animate-slide-up"
+                <p class="mt-6 text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed animate-slide-up"
                     style="animation-delay: 0.2s;">
                     Instant answers about admissions, fees, courses, and campus life. Powered by advanced local AI for
                     privacy and speed.
@@ -97,7 +97,7 @@
                         <i class="fas fa-comment-dots mr-2"></i> Start Chatting
                     </button>
                     <a href="#features"
-                        class="px-8 py-4 bg-white/80 hover:bg-white text-gray-700 font-bold rounded-2xl border border-gray-200 hover:border-gray-300 shadow-sm hover:shadow-md transform hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm flex items-center justify-center">
+                        class="px-8 py-4 bg-white/80 dark:bg-gray-700/80 hover:bg-white dark:hover:bg-gray-600 text-gray-700 dark:text-gray-100 font-bold rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 shadow-sm hover:shadow-md transform hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm flex items-center justify-center">
                         <i class="fas fa-info-circle mr-2 opacity-50"></i> Learn More
                     </a>
                 </div>
@@ -106,34 +106,34 @@
 
         <!-- Features Grid -->
         <div id="features" class="grid md:grid-cols-2 gap-8 mb-20 animate-slide-up" style="animation-delay: 0.4s;">
-            <div class="glass-card rounded-3xl p-8 relative overflow-hidden group">
+            <div class="glass-card dark:bg-gray-700/30 dark:backdrop-blur-sm rounded-3xl p-8 relative overflow-hidden group">
                 <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                    <i class="fas fa-search text-9xl text-primary-500 transform rotate-12"></i>
+                    <i class="fas fa-search text-9xl text-primary-500 dark:text-primary-600 transform rotate-12"></i>
                 </div>
                 <div class="relative z-10">
                     <div
-                        class="w-14 h-14 bg-primary-100 rounded-2xl flex items-center justify-center mb-6 text-primary-600 shadow-sm">
+                        class="w-14 h-14 bg-primary-100 dark:bg-primary-900/40 rounded-2xl flex items-center justify-center mb-6 text-primary-600 dark:text-primary-400 shadow-sm">
                         <i class="fas fa-bolt text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Instant Information</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Instant Information</h3>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
                         Get accurate answers about admissions, courses, fees, campus life, and more directly from the
                         official knowledge base.
                     </p>
                 </div>
             </div>
 
-            <div class="glass-card rounded-3xl p-8 relative overflow-hidden group">
+            <div class="glass-card dark:bg-gray-700/30 dark:backdrop-blur-sm rounded-3xl p-8 relative overflow-hidden group">
                 <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                    <i class="fas fa-brain text-9xl text-emerald-500 transform -rotate-12"></i>
+                    <i class="fas fa-brain text-9xl text-emerald-500 dark:text-emerald-600 transform -rotate-12"></i>
                 </div>
                 <div class="relative z-10">
                     <div
-                        class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6 text-emerald-600 shadow-sm">
+                        class="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/40 rounded-2xl flex items-center justify-center mb-6 text-emerald-600 dark:text-emerald-400 shadow-sm">
                         <i class="fas fa-shield-alt text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Private & Secure</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Private & Secure</h3>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
                         Powered by local AI with Ollama and vector search with Qdrant. Your queries are processed
                         locally for maximum privacy.
                     </p>
@@ -142,14 +142,14 @@
         </div>
 
         <!-- Knowledge Base Status -->
-        <div class="glass rounded-3xl p-8 md:p-10 mb-12 animate-slide-up" style="animation-delay: 0.5s;">
+        <div class="glass dark:bg-gray-800/50 dark:backdrop-blur-sm rounded-3xl p-8 md:p-10 mb-12 animate-slide-up" style="animation-delay: 0.5s;">
             <div class="flex items-center justify-between mb-8">
                 <div>
-                    <h2 class="text-2xl font-bold text-gray-900">Knowledge Base</h2>
-                    <p class="text-gray-500 text-sm mt-1">Active documents loaded in the vector database</p>
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Knowledge Base</h2>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Active documents loaded in the vector database</p>
                 </div>
                 <span
-                    class="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-xs font-bold uppercase tracking-wider">
+                    class="px-3 py-1 bg-primary-100 dark:bg-primary-900/40 text-primary-700 dark:text-primary-300 rounded-full text-xs font-bold uppercase tracking-wider">
                     <?php echo count(glob("knowledge/*.{txt,pdf}", GLOB_BRACE)); ?> Documents
                 </span>
             </div>
@@ -165,13 +165,13 @@
                     $color = $ext === 'pdf' ? 'text-red-500' : 'text-primary-500';
                     ?>
                     <div
-                        class="bg-white/50 hover:bg-white rounded-xl p-4 border border-white/40 hover:border-white shadow-sm hover:shadow-md transition-all duration-300 text-center group cursor-default">
+                        class="bg-white/50 dark:bg-gray-700/50 hover:bg-white dark:hover:bg-gray-600 rounded-xl p-4 border border-white/40 dark:border-gray-600/40 hover:border-white dark:hover:border-gray-500 shadow-sm hover:shadow-md transition-all duration-300 text-center group cursor-default">
                         <div class="mb-3 transform group-hover:scale-110 transition-transform duration-300">
                             <i class="fas <?php echo $icon; ?> <?php echo $color; ?> text-3xl opacity-80"></i>
                         </div>
-                        <p class="font-semibold text-gray-800 text-sm truncate px-2" title="<?php echo $filename; ?>">
+                        <p class="font-semibold text-gray-800 dark:text-gray-100 text-sm truncate px-2" title="<?php echo $filename; ?>">
                             <?php echo $filename; ?></p>
-                        <p class="text-xs text-gray-500 mt-1 font-medium"><?php echo $size; ?> KB</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 font-medium"><?php echo $size; ?> KB</p>
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -181,7 +181,7 @@
     <!-- Floating Chat Button -->
     <button id="chatToggle"
         class="fixed bottom-8 right-8 bg-gradient-to-r from-primary-600 to-primary-500 text-white w-16 h-16 rounded-2xl shadow-xl shadow-primary-600/30 hover:shadow-2xl hover:shadow-primary-600/40 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center z-50 group">
-        <i class="fas fa-comment-dots text-2xl group-hover:scale-110 transition-transform"></i>
+        <i class="fas fa-robot text-2xl group-hover:scale-110 transition-transform"></i>
         <span class="absolute top-0 right-0 -mt-1 -mr-1 flex h-4 w-4">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-4 w-4 bg-red-500"></span>
@@ -190,7 +190,7 @@
 
     <!-- Chat Interface -->
     <div id="chatInterface"
-        class="fixed bottom-28 right-4 w-[calc(100%-2rem)] md:w-[28rem] md:right-8 h-[36rem] glass-dark rounded-3xl shadow-2xl flex flex-col transition-all duration-500 origin-bottom-right transform scale-0 opacity-0 invisible z-50 overflow-hidden border border-white/20">
+        class="fixed bottom-28 right-4 w-[calc(100%-2rem)] md:w-[28rem] md:right-8 h-[36rem] glass-dark dark:bg-gray-800/95 dark:backdrop-blur-md rounded-3xl shadow-2xl flex flex-col transition-all duration-500 origin-bottom-right transform scale-0 opacity-0 invisible z-50 overflow-hidden border border-white/20 dark:border-white/10">
 
         <!-- Chat Header -->
         <div
@@ -198,8 +198,8 @@
             <div class="absolute inset-0 bg-white/10 pattern-dots opacity-20"></div>
             <div class="flex items-center relative z-10">
                 <div
-                    class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mr-3 border border-white/20">
-                    <i class="fas fa-robot text-white text-lg"></i>
+                    class="w-10 h-10 flex items-center justify-center mr-3">
+                    <img src="./assets/Mak-Logo.png" alt="MAKAI Logo" class="h-full w-full object-contain">
                 </div>
                 <div>
                     <h3 class="font-bold text-lg leading-tight">MAKAI Assistant</h3>
@@ -216,7 +216,7 @@
         </div>
 
         <!-- Chat Messages Container -->
-        <div id="chatMessages" class="flex-1 p-5 overflow-y-auto bg-gray-50/50 space-y-4 scroll-smooth">
+        <div id="chatMessages" class="flex-1 p-5 overflow-y-auto bg-gray-50/50 dark:bg-gray-700/30 space-y-4 scroll-smooth">
             <!-- Welcome message -->
             <div class="animate-fade-in">
                 <div class="ai-bubble chat-bubble relative group">
@@ -228,27 +228,27 @@
                         </div>
                         <span class="text-xs font-bold text-gray-500 uppercase tracking-wide">MAKAI</span>
                     </div>
-                    <p class="text-sm text-gray-700">Hello! I'm MAKAI, your Makerere University assistant. How can I
+                    <p class="text-sm text-gray-800 dark:text-gray-500">Hello! I'm MAKAI, your Makerere University assistant. How can I
                         help you today?</p>
-                    <div class="text-[10px] text-gray-400 mt-2 text-right">Just now</div>
+                    <div class="text-[10px] text-gray-400 dark:text-gray-500 mt-2 text-right">Just now</div>
                 </div>
             </div>
 
             <!-- Example questions -->
             <div class="py-4">
-                <p class="text-xs font-semibold text-gray-400 mb-3 ml-1 uppercase tracking-wider">Suggested Questions
+                <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 mb-3 ml-1 uppercase tracking-wider">Suggested Questions
                 </p>
                 <div class="flex flex-wrap gap-2">
                     <button
-                        class="example-question text-xs bg-white border border-gray-200 hover:border-primary-300 hover:bg-primary-50 text-gray-600 hover:text-primary-700 px-4 py-2 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md text-left">
+                        class="example-question text-xs bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:border-primary-300 dark:hover:border-primary-600 hover:bg-primary-50 dark:hover:bg-primary-900/30 text-gray-600 dark:text-gray-300 hover:text-primary-700 dark:hover:text-primary-300 px-4 py-2 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md text-left">
                         Admission requirements?
                     </button>
                     <button
-                        class="example-question text-xs bg-white border border-gray-200 hover:border-primary-300 hover:bg-primary-50 text-gray-600 hover:text-primary-700 px-4 py-2 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md text-left">
+                        class="example-question text-xs bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:border-primary-300 dark:hover:border-primary-600 hover:bg-primary-50 dark:hover:bg-primary-900/30 text-gray-600 dark:text-gray-300 hover:text-primary-700 dark:hover:text-primary-300 px-4 py-2 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md text-left">
                         How much is tuition?
                     </button>
                     <button
-                        class="example-question text-xs bg-white border border-gray-200 hover:border-primary-300 hover:bg-primary-50 text-gray-600 hover:text-primary-700 px-4 py-2 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md text-left">
+                        class="example-question text-xs bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:border-primary-300 dark:hover:border-primary-600 hover:bg-primary-50 dark:hover:bg-primary-900/30 text-gray-600 dark:text-gray-300 hover:text-primary-700 dark:hover:text-primary-300 px-4 py-2 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md text-left">
                         Recover my password?
                     </button>
                 </div>
@@ -256,17 +256,17 @@
         </div>
 
         <!-- Chat Input -->
-        <div class="p-4 bg-white border-t border-gray-100">
+        <div class="p-4 bg-white dark:bg-gray-700 border-t border-gray-100 dark:border-gray-600">
             <div class="relative">
                 <input type="text" id="chatInput" placeholder="Ask about Makerere University..."
-                    class="w-full bg-gray-50 border-0 rounded-xl pl-4 pr-12 py-4 focus:ring-2 focus:ring-primary-100 focus:bg-white transition-all text-sm shadow-inner placeholder-gray-400"
+                    class="w-full bg-gray-50 dark:bg-gray-800 border-0 rounded-xl pl-4 pr-12 py-4 focus:ring-2 focus:ring-primary-100 dark:focus:ring-primary-900 focus:bg-white dark:focus:bg-gray-700 transition-all text-sm shadow-inner placeholder-gray-400 dark:placeholder-gray-500 text-gray-900 dark:text-white"
                     autocomplete="off">
                 <button id="sendMessage"
                     class="absolute right-2 top-2 bottom-2 w-10 bg-primary-600 hover:bg-primary-700 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center">
                     <i class="fas fa-paper-plane text-sm"></i>
                 </button>
             </div>
-            <p class="text-[10px] text-gray-400 mt-3 text-center flex items-center justify-center">
+            <p class="text-[10px] text-gray-400 dark:text-gray-500 mt-3 text-center flex items-center justify-center">
                 <i class="fas fa-shield-alt mr-1.5 text-primary-400"></i> Encrypted local processing
             </p>
         </div>
@@ -387,10 +387,10 @@
                         <div class="user-bubble chat-bubble relative shadow-lg shadow-primary-500/20">
                             <div class="absolute -right-2 top-0 w-2 h-2 bg-primary-600 skew-x-[-20deg] rounded-br"></div>
                             <div class="flex items-center justify-end mb-1">
-                                <span class="text-xs font-bold text-primary-100 mr-2 uppercase tracking-wide">You</span>
+                                <span class="text-xs font-bold text-primary-100 dark:text-primary-200 mr-2 uppercase tracking-wide">You</span>
                             </div>
-                            <p class="text-sm font-medium">${escapeHtml(message)}</p>
-                            <div class="text-[10px] text-primary-200 text-right mt-1.5 opacity-0 group-hover:opacity-100 transition-opacity">${getCurrentTime()}</div>
+                            <p class="text-sm font-medium text-primary-900 dark:text-white">${escapeHtml(message)}</p>
+                            <div class="text-[10px] text-primary-200 dark:text-primary-300 text-right mt-1.5 opacity-0 group-hover:opacity-100 transition-opacity">${getCurrentTime()}</div>
                         </div>
                     </div>
                 `;
@@ -400,13 +400,13 @@
                     <div class="ai-bubble chat-bubble relative shadow-md">
                         <div class="absolute -left-2 top-0 w-2 h-2 bg-white skew-x-[20deg] rounded-bl"></div>
                         <div class="flex items-center mb-2">
-                            <div class="w-6 h-6 rounded-lg bg-primary-100 flex items-center justify-center mr-2 text-primary-600">
+                            <div class="w-6 h-6 rounded-lg bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center mr-2 text-primary-600 dark:text-primary-400">
                                 <i class="fas fa-robot text-xs"></i>
                             </div>
-                            <span class="text-xs font-bold text-gray-500 uppercase tracking-wide">MAKAI</span>
+                            <span class="text-xs font-bold text-gray-700 dark:text-gray-200 uppercase tracking-wide">MAKAI</span>
                         </div>
-                        <div class="text-sm prose prose-sm max-w-none text-gray-700 prose-headings:text-primary-800 prose-a:text-primary-600 prose-strong:text-primary-700">${formattedMessage}</div>
-                        <div class="text-[10px] text-gray-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">${getCurrentTime()}</div>
+                        <div class="text-sm prose prose-sm max-w-none text-gray-800 dark:text-gray-300 prose-headings:text-primary-800 dark:prose-headings:text-primary-400 prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-strong:text-primary-700 dark:prose-strong:text-primary-300">${formattedMessage}</div>
+                        <div class="text-[10px] text-gray-600 dark:text-gray-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">${getCurrentTime()}</div>
                     </div>
                 `;
             }
@@ -430,12 +430,12 @@
 
             sources.forEach((source, index) => {
                 sourcesHtml += `
-                    <div class="text-xs text-gray-600 p-3 bg-white/60 rounded-xl border border-gray-100 hover:border-primary-200 hover:bg-white hover:shadow-sm transition-all duration-200 cursor-help" title="Score: ${source.score}">
+                    <div class="text-xs text-gray-600 dark:text-gray-300 p-3 bg-white/60 dark:bg-gray-700/60 rounded-xl border border-gray-100 dark:border-gray-600/60 hover:border-primary-200 dark:hover:border-primary-700 hover:bg-white dark:hover:bg-gray-600 hover:shadow-sm transition-all duration-200 cursor-help" title="Score: ${source.score}">
                         <div class="flex justify-between items-start mb-1">
-                            <span class="font-bold text-primary-700 truncate w-3/4">${escapeHtml(source.source)}</span>
-                            <span class="text-[10px] px-1.5 py-0.5 bg-green-100 text-green-700 rounded-md font-mono">${Math.round(source.score * 100)}%</span>
+                            <span class="font-bold text-primary-700 dark:text-primary-300 truncate w-3/4">${escapeHtml(source.source)}</span>
+                            <span class="text-[10px] px-1.5 py-0.5 bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 rounded-md font-mono">${Math.round(source.score * 100)}%</span>
                         </div>
-                        <p class="text-gray-500 italic line-clamp-2 leading-relaxed">"...${escapeHtml(source.content)}..."</p>
+                        <p class="text-gray-500 dark:text-gray-400 italic line-clamp-2 leading-relaxed">"...${escapeHtml(source.content)}..."</p>
                     </div>
                 `;
             });
